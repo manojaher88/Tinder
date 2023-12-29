@@ -16,6 +16,8 @@
 		AFEC0C5A2B3EDC00007F527C /* TinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0C592B3EDC00007F527C /* TinderUITestsLaunchTests.swift */; };
 		AFEC0C672B3EDDDB007F527C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0C662B3EDDDB007F527C /* MainView.swift */; };
 		AFEC0C6A2B3EDF4A007F527C /* TabBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0C692B3EDF4A007F527C /* TabBarButtonView.swift */; };
+		AFEC0C6C2B3EE1ED007F527C /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0C6B2B3EE1ED007F527C /* AppStateManager.swift */; };
+		AFEC0C6F2B3EE3C5007F527C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0C6E2B3EE3C5007F527C /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		AFEC0C592B3EDC00007F527C /* TinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AFEC0C662B3EDDDB007F527C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AFEC0C692B3EDF4A007F527C /* TabBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonView.swift; sourceTree = "<group>"; };
+		AFEC0C6B2B3EE1ED007F527C /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
+		AFEC0C6E2B3EE3C5007F527C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +102,14 @@
 		AFEC0C3B2B3EDBFE007F527C /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				AFEC0C6D2B3EE3AD007F527C /* Extensions */,
 				AFEC0C682B3EDF37007F527C /* SwiftUIViews */,
 				AFEC0C3C2B3EDBFE007F527C /* TinderApp.swift */,
 				AFEC0C3E2B3EDBFE007F527C /* ContentView.swift */,
 				AFEC0C402B3EDBFF007F527C /* Assets.xcassets */,
 				AFEC0C422B3EDBFF007F527C /* Preview Content */,
 				AFEC0C662B3EDDDB007F527C /* MainView.swift */,
+				AFEC0C6B2B3EE1ED007F527C /* AppStateManager.swift */,
 			);
 			path = Tinder;
 			sourceTree = "<group>";
@@ -139,6 +145,14 @@
 				AFEC0C692B3EDF4A007F527C /* TabBarButtonView.swift */,
 			);
 			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		AFEC0C6D2B3EE3AD007F527C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC0C6E2B3EE3C5007F527C /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,8 @@
 				AFEC0C3F2B3EDBFE007F527C /* ContentView.swift in Sources */,
 				AFEC0C672B3EDDDB007F527C /* MainView.swift in Sources */,
 				AFEC0C3D2B3EDBFE007F527C /* TinderApp.swift in Sources */,
+				AFEC0C6F2B3EE3C5007F527C /* View+Extension.swift in Sources */,
+				AFEC0C6C2B3EE1ED007F527C /* AppStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
