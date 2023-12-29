@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum TabbarButtonType: String {
+enum TabbarButtonType: String, CaseIterable {
     case fire = "flame.fill"
     case star = "star.fill"
     case message = "message.fill"
@@ -15,23 +15,26 @@ enum TabbarButtonType: String {
 }
 
 struct TabBarButtonView: View {
+    @EnvironmentObject var appState: AppStateManager
     let type: TabbarButtonType
-    let action: () -> Void
 
     var body: some View {
         Button {
-            action()
+            appState.selectedTab = type
         } label: {
             Image(systemName: type.rawValue)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .if(appState.selectedTab == type, transform: {
+                    $0.foregroundStyle(type == .star ? .yellow: .red)
+                })
                 .foregroundColor(.gray.opacity(0.5))
         }
+        .frame(height: 32)
     }
 }
 
 #Preview {
-    TabBarButtonView(type: .fire) {
-        print("Tapped")
-    }
+    TabBarButtonView(type: .fire)
+        .environmentObject(AppStateManager())
 }
