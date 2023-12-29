@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var selectedTab: String = "fire"
     @EnvironmentObject var appState: AppStateManager
     var body: some View {
         ZStack {
@@ -29,9 +28,27 @@ struct MainView: View {
                     Spacer()
                 }
                 .frame(height: 100)
+                .padding()
+                viewForSelecedIndex()
 
                 Spacer()
             }
+            .ignoresSafeArea(edges: .vertical)
+        }
+    }
+
+    @ViewBuilder
+    func viewForSelecedIndex() -> some View {
+        switch appState.selectedTab {
+        case .fire:
+            Color.red
+        case .star:
+            Color.yellow
+        case .message:
+            Color.blue
+        case .profile:
+            Text("Profile")
+                .background(Color.green)
         }
     }
 }
